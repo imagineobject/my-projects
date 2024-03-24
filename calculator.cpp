@@ -12,6 +12,10 @@
 
 int main() {
 
+std::cout << "********************" << '\n';
+std::cout << "** C++ Calculator **" << '\n';
+std::cout << "********************" << '\n';
+    
 std::cout << "What do you want to do?" << '\n';
 std::cout << "Type 'A' to Add, 'S' to Subtract, 'M' to Multiply and 'D' to divide: ";
 char oper;
