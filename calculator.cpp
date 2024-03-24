@@ -2,48 +2,19 @@
 
 #include <iostream>
 
-namespace clutter1 {
-    double number;
-}
+    double number_one;
+    double number_two; 
 
-namespace clutter2 {
-    double number; 
-}
+    void add();
+    void sub();
+    void mul();
+    void divid();
 
-char oper;
-
-void add() {
-    std::cout << "Enter the first number: ";
-    std::cin >> clutter1::number;
-std::cout << "Enter the second number: ";  
-    std::cin >> clutter2::number;
-    std::cout <<  "The awnser is: " << clutter1::number+clutter2::number << '\n'; }
-
-void sub() {
-    std::cout << "Enter the first number: ";
-    std::cin >> clutter1::number;
-std::cout << "Enter the second number: ";  
-    std::cin >> clutter2::number; 
-    std::cout <<  "The awnser is: " << clutter1::number-clutter2::number << '\n'; }
-
-void mul() {
-    std::cout << "Enter the first number: ";
-    std::cin >> clutter1::number;
-std::cout << "Enter the second number: ";  
-    std::cin >> clutter2::number;
-    std::cout <<  "The awnser is: " << clutter1::number*clutter2::number << '\n'; }
-
-void divid() {
-    std::cout << "Enter the first number: ";
-    std::cin >> clutter1::number;
-std::cout << "Enter the second number: ";  
-    std::cin >> clutter2::number;
-    std::cout << "The awnser is: " << clutter1::number/clutter2::number << '\n'; }
-
-void oper_handle() {
+int main() {
 
 std::cout << "What do you want to do?" << '\n';
 std::cout << "Type 'A' to Add, 'S' to Subtract, 'M' to Multiply and 'D' to divide: ";
+char oper;
 std::cin >> oper;
 
 if (oper == 'A') {
@@ -58,12 +29,33 @@ if (oper == 'M') {
 if (oper == 'D') {
  divid(); }
 
+    return 0;
 }
 
-int main() {
+void add() {
+    std::cout << "Enter the first number: ";
+    std::cin >> number_one;
+std::cout << "Enter the second number: ";  
+    std::cin >> number_two;
+    std::cout <<  "The awnser is: " << number_one+number_two << '\n'; }
 
-if (oper == 'A' || 'S' || 'M' || 'D') {
-  oper_handle();  
-} 
+void sub() {
+    std::cout << "Enter the first number: ";
+    std::cin >> number_one;
+std::cout << "Enter the second number: ";  
+    std::cin >> number_two;
+    std::cout <<  "The awnser is: " << number_one-number_two << '\n'; }
 
-    return 0; }
+void mul() {
+    std::cout << "Enter the first number: ";
+    std::cin >> number_one;
+std::cout << "Enter the second number: ";  
+    std::cin >> number_two;
+    std::cout <<  "The awnser is: " << number_one*number_two << '\n'; }
+
+void divid() {
+    std::cout << "Enter the first number: ";
+    std::cin >> number_one;
+std::cout << "Enter the second number: ";  
+    std::cin >> number_two;
+    std::cout <<  "The awnser is: " << number_one/number_two << '\n'; }
